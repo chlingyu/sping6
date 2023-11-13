@@ -7,7 +7,7 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-
+        <!--引入外部属性文件-->
         <context:property-placeholder location="classpath:jdbc.properties"/>
 
         <bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource">
@@ -16,5 +16,8 @@
             <property name="username" value="${jdbc.user}"/>
             <property name="password" value="${jdbc.password}"/>
         </bean>
+
+     <!--bean的作用域-->
+      <bean class="com.lingyu.bean.User" scope="singleton"></bean>
 
 </beans>

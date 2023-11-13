@@ -17,4 +17,13 @@ public class JdbcTest {
         Connection connection = dataSource.getConnection();
         System.out.println(connection);
     }
+
+
+    @Test
+    public void testBeanScope(){
+        ApplicationContext ac = new ClassPathXmlApplicationContext("beans-jdbc.xml");
+        User user1 = ac.getBean(User.class);
+        User user2 = ac.getBean(User.class);
+        System.out.println(user1==user2);
+    }
 }
