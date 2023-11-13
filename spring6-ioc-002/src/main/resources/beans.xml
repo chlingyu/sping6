@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student1" class="com.lingyu.bean.Student">
+        <property name="hobbies">
+            <array>
+                <value>抽烟</value>
+                <value>喝酒</value>
+                <value>烫头</value>
+            </array>
+        </property>
+    </bean>
+
+    <bean id="student2" class="com.lingyu.bean.Student">
+        <property name="hobbies">
+            <array>
+                <value>羽毛球</value>
+                <value>乒乓球</value>
+                <value>篮球</value>
+            </array>
+        </property>
+    </bean>
+
+
+    <bean id="clazz" class="com.lingyu.bean.Clazz">
+        <property name="students">
+            <list>
+                <ref bean="student1"></ref>
+                <ref bean="student2"></ref>
+
+            </list>
+        </property>
+    </bean>
+
+    <!--///////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <bean id="teacherOne" class="com.lingyu.bean.Teacher">
+        <property name="teacherId" value="10010"></property>
+        <property name="teacherName" value="大宝"></property>
+    </bean>
+
+    <bean id="teacherTwo" class="com.lingyu.bean.Teacher">
+        <property name="teacherId" value="10086"></property>
+        <property name="teacherName" value="二宝"></property>
+    </bean>
+
+    <bean id="student3" class="com.lingyu.bean.Student">
+        <property name="teacherMap">
+            <map>
+                <entry>
+                    <key>
+                        <value>10010</value>
+                    </key>
+                    <ref bean="teacherOne"></ref>
+                </entry>
+                <entry>
+                    <key>
+                        <value>10086</value>
+                    </key>
+                    <ref bean="teacherTwo"></ref>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,6 @@
+# Project exclude paths
+/spring6-first/target/
+/spring6-ioc-xml/target/
+# 项目排除路径
+/spring6-ioc-001/target/
+/spring6-ioc-002/target/
