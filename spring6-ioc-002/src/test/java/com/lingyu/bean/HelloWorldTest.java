@@ -48,8 +48,8 @@ public class HelloWorldTest {
     @Test
     public void testMapByUtil(){
         ApplicationContext ac = new ClassPathXmlApplicationContext("beans-list-map.xml");
-        Student student = ac.getBean("students", Student.class);
-        System.out.println(student);
+        Clazz clazz = ac.getBean("clazzTwo", Clazz.class);
+        System.out.println(clazz);
     }
 
 
