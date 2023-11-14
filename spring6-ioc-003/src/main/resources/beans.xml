@@ -14,4 +14,7 @@
 
     <bean id="myBeanProcessor" class="MyBeanProcessor"/>
 
+    <bean id="user" class="com.lingyu.bean.UserFactoryBean"></bean>
+
+
 </beans>
