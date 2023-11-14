@@ -9,6 +9,7 @@
         <module name="spring6-first" />
         <module name="spring6-ioc-001" />
         <module name="spring6-ioc-002" />
+        <module name="spring6-ioc-003" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -12,6 +12,7 @@
         <module>spring6-first</module>
         <module>spring6-ioc-001</module>
         <module>spring6-ioc-002</module>
+        <module>spring6-ioc-003</module>
     </modules>
 
     <properties>
